@@ -1,6 +1,5 @@
-import { NgClass } from '@angular/common';
 import { Component, computed, signal} from '@angular/core';
-import { NgModule } from '@angular/core';
+import { CharacterList } from "../../components/dragonball/character-list/character-list";
 
 interface Character {
   id: number;
@@ -9,14 +8,14 @@ interface Character {
 }
 
 @Component({
-  templateUrl: './dragonball-component.html',
+  templateUrl: './dragonballsuper-component.html',
   imports: [
-    NgClass
-  ],
+    CharacterList
+],
 
 })
 
-export class DragonBallComponent {
+export class DragonBallSuperComponent {
 
   name = signal('');
   power = signal(0);

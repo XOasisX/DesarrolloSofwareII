@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { CounterPagesComponent } from './pages/counter/counter-pages.component';
 import { CarComponent } from './pages/car/car.component';
 import { DragonBallComponent } from './pages/dragonball/dragonball-component';
+import { DragonBallSuperComponent } from './pages/dragonballsuper/dragonballsuper-component';
 
 export const routes: Routes = [
     {
@@ -15,5 +16,13 @@ export const routes: Routes = [
     {
         path: 'dragonball',
         component: DragonBallComponent
+    },
+    {
+        path: 'dragonballsuper',
+        component: DragonBallSuperComponent
+    },
+    {
+        path: '**',
+        redirectTo: ''
     }
 ];
