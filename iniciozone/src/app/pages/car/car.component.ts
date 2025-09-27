@@ -1,7 +1,8 @@
 import { Component, signal} from '@angular/core';
 
 @Component({
-  templateUrl: './car.component.html',  
+  templateUrl: './car.component.html', 
+  styleUrls: ['./car.component.css'], 
 })
 
 //Dentro del componente CarComponent, crea tres señales con valores iniciales:
