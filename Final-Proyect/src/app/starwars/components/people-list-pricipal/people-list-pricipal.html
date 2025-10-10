@@ -1,0 +1,31 @@
+<div class="min-h-screen bg-gray-900 text-white p-8">
+  <h2 class="text-3xl font-bold mb-6 text-center">
+    🌌 Lista de Personajes de Star Wars
+  </h2>
+
+  <!-- Contenedor principal -->
+  <div class="page-container flex gap-6 p-6">
+    <!-- Listado -->
+    <div class="list-section flex-1">
+      <person-list 
+        [personajes]="personajes()" 
+        (borrar)="borrarPersonaje($event)">
+      </person-list>
+    </div>
+
+    <!-- Formulario -->
+    <div class="form-section w-1/3">
+      <button 
+        (click)="verFormulario()" 
+        class="px-4 py-2 mb-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        {{ mostrarFormulario() ? 'Ocultar Formulario' : 'Agregar Personaje' }}
+      </button>
+
+      <person-form 
+        *ngIf="mostrarFormulario()" 
+        (nuevoPersonaje)="agregarPersonajeLocal($event)">
+      </person-form>
+    </div>
+  </div>
+</div>
+

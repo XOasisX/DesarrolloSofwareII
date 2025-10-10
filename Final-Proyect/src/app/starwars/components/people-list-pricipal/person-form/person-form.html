@@ -1,0 +1,25 @@
+<form (ngSubmit)="enviarFormulario()" class="bg-gray-800 p-6 rounded-xl w-3/4 mb-6 shadow-lg">
+  <div class="mb-4">
+    <label class="block mb-2">Nombre:</label>
+    <input [(ngModel)]="nuevo.name" name="name" class="w-full p-2 rounded bg-gray-700 text-white" required />
+  </div>
+
+  <div class="mb-4">
+    <label class="block mb-2">Género:</label>
+    <select [(ngModel)]="nuevo.gender" name="gender" class="w-full p-2 rounded bg-gray-700 text-white" required>
+      <option value="">Seleccione</option>
+      <option value="male">Masculino</option>
+      <option value="female">Femenino</option>
+      <option value="n/a">No aplica</option>
+    </select>
+  </div>
+
+  <div class="mb-4">
+    <label class="block mb-2">Año de nacimiento:</label>
+    <input [(ngModel)]="nuevo.birth_year" name="birth_year" class="w-full p-2 rounded bg-gray-700 text-white" required />
+  </div>
+
+  <button type="submit" class="px-5 py-2 bg-green-600 hover:bg-green-700 rounded-xl shadow-lg transition-all">
+    Guardar personaje
+  </button>
+</form>

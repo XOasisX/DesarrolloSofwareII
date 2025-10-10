@@ -1,0 +1,75 @@
+   <div class="min-h-screen bg-gray-900 text-white p-6 md:p-10 font-sans">
+      <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-400 tracking-wider uppercase">
+          Star Wars Films 
+        </h1>
+        <p class="text-gray-400 mt-2 text-lg">Busca detalles de películas por número de episodio.</p>
+      </header>
+
+      <!-- Formulario de Búsqueda -->
+      <form (submit)="searchFilm()" class="max-w-xl mx-auto mb-10 p-6 bg-gray-800 rounded-xl shadow-2xl border border-yellow-500/20">
+          <div class="relative">
+              <div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
+                  <svg class="w-5 h-5 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                  </svg>
+              </div>
+              
+              <!-- Campo de Búsqueda -->
+              <input 
+                  type="number" 
+                  id="episode-search"
+                  name="episodeId"
+                  [(ngModel)]="episodeId"
+                  required 
+                  min="1"
+                  max="6"
+                  placeholder="Ej: 4, 5, 6 (1-6)" 
+                  class="block w-full p-4 ps-12 text-lg text-white border border-gray-600 rounded-xl bg-gray-700 focus:ring-yellow-500 focus:border-yellow-500 placeholder-gray-400 transition duration-300" 
+              />
+              
+              <button 
+                  type="submit" 
+                  class="text-gray-900 absolute end-2.5 bottom-2.5 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-bold rounded-lg text-sm px-5 py-2 transition duration-300"
+                  [disabled]="!movieService.dataReady() || !episodeId">
+                  Buscar
+              </button>
+          </div>
+          
+          <!-- Mensaje de Carga -->
+          @if (movieService.isLoading()) {
+              <p class="text-center text-sm text-yellow-400 mt-3 animate-pulse">Cargando datos de la Galaxia...</p>
+          }
+          @if (errorMessage()) {
+            <p class="text-center text-sm text-red-500 mt-3">{{ errorMessage() }}</p>
+          }
+      </form>
+
+      <!-- Resultado de la Búsqueda -->
+      @if (foundFilm()) {
+        <div class="max-w-3xl mx-auto mt-10 p-8 bg-gray-800 rounded-xl shadow-lg border-t-4 border-yellow-500 transition duration-500 ease-in-out">
+            <h2 class="text-3xl font-bold text-yellow-400 mb-4">{{ foundFilm()!.titulo }}</h2>
+            <p class="text-lg font-medium text-gray-300 mb-6">Episodio: {{ foundFilm()!.episodio }}</p>
+            
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <span class="text-yellow-500 text-xl">👤</span>
+                    <p class="text-lg text-gray-200">
+                        <span class="font-semibold text-gray-400">Director:</span> {{ foundFilm()!.director }}
+                    </p>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-300 pt-4 border-t border-gray-700">Texto de Apertura (Opening Crawl)</h3>
+                <!-- Nota: 'whitespace-pre-wrap' es importante para mantener los saltos de línea del opening crawl -->
+                <p class="text-md text-gray-400 leading-relaxed font-mono whitespace-pre-wrap starwars-crawl-effect p-4 bg-gray-900 rounded-lg">
+                    {{ foundFilm()!.textoApertura }}
+                </p>
+            </div>
+        </div>
+      } @else if (episodeId && movieService.dataReady() && !errorMessage()) {
+        <div class="text-center text-gray-400 mt-10 p-8">
+            <p class="text-lg">No se encontró una película con el número de episodio {{ episodeId }}.</p>
+            <p class="text-sm mt-1">Intenta con un número del 1 al 6.</p>
+        </div>
+      }
+    </div>
