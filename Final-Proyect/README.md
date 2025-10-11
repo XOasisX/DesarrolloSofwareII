@@ -8,7 +8,7 @@ Bienvenido a la documentación completa del proyecto **Final-Proyect**, una apli
 
 Esta documentación está organizada en módulos temáticos para facilitar la navegación y comprensión del proyecto.
 
-### 1. [Introducción](./01-introduccion.md)
+### 1. [Introducción](./docs/01-introduccion.md)
 **Integrantes, propósito y dependencias**
 
 Contenido:
@@ -26,7 +26,7 @@ Contenido:
 
 ---
 
-### 2. [Estructura del Proyecto](./02-estructura.md)
+### 2. [Estructura del Proyecto](./docs/02-estructura.md)
 **Organización de archivos y carpetas**
 
 Contenido:
@@ -42,7 +42,7 @@ Contenido:
 
 ---
 
-### 3. [Servicios](./03-servicios.md)
+### 3. [Servicios](./docs/03-servicios.md)
 **Lógica de negocio y consumo de APIs**
 
 Contenido:
@@ -59,7 +59,7 @@ Contenido:
 
 ---
 
-### 4. [Componentes y Páginas](./04-componentes.md)
+### 4. [Componentes y Páginas](./docs/04-componentes.md)
 **Estructura de la interfaz de usuario**
 
 Contenido:
@@ -77,7 +77,7 @@ Contenido:
 
 ---
 
-### 5. [Funcionalidades](./05-funcionalidades.md)
+### 5. [Funcionalidades](./docs/05-funcionalidades.md)
 **Casos de uso y flujos de usuario**
 
 Contenido:
@@ -95,7 +95,7 @@ Contenido:
 
 ---
 
-### 6. [Instalación y Ejecución](./06-instalacion-ejecucion.md)
+### 6. [Instalación y Ejecución](./docs/06-instalacion-ejecucion.md)
 **Guía paso a paso para desarrolladores**
 
 Contenido:
@@ -133,7 +133,7 @@ Si quieres empezar rápidamente, sigue estos pasos:
    http://localhost:4200
    ```
 
-Para más detalles, consulta **[06-instalacion-ejecucion.md](./06-instalacion-ejecucion.md)**.
+Para más detalles, consulta **[06-instalacion-ejecucion.md](./docs/06-instalacion-ejecucion.md)**.
 
 ---
 
