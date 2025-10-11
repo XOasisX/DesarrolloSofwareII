@@ -110,6 +110,10 @@ Contenido:
 - Opciones de despliegue (Vercel, Netlify, Firebase, GitHub Pages)
 - Comandos útiles de desarrollo
 
+### 7. Uso de Intelignecia Artificial
+
+Durante el desarrollo de este proyecto, se emplearon herramientas de inteligencia artificial, incluyendo Windsurf, principalmente como asistentes para el diseño de estilos en los archivos .html y para mejorar aspectos visuales y funcionales de la aplicación.
+
 **Ideal para**: Poner en marcha el proyecto en tu entorno local.
 
 ---
@@ -143,24 +147,12 @@ Para más detalles, consulta **[06-instalacion-ejecucion.md](./docs/06-instalaci
 
 Recomendamos leer los documentos en este orden:
 
-1. **[Introducción](./01-introduccion.md)** - Contexto general
-2. **[Instalación y Ejecución](./06-instalacion-ejecucion.md)** - Poner en marcha el proyecto
-3. **[Estructura](./02-estructura.md)** - Familiarizarse con la organización
-4. **[Funcionalidades](./05-funcionalidades.md)** - Entender qué hace la aplicación
-5. **[Servicios](./03-servicios.md)** - Profundizar en la lógica de negocio
-6. **[Componentes](./04-componentes.md)** - Estudiar la UI
-
----
-
-### Para Revisión Rápida
-
-Si ya conoces el proyecto y necesitas consultar algo específico:
-
-- **¿Dónde está el archivo X?** → [Estructura](./02-estructura.md)
-- **¿Cómo funciona el servicio Y?** → [Servicios](./03-servicios.md)
-- **¿Qué hace el componente Z?** → [Componentes](./04-componentes.md)
-- **¿Cómo implemento la funcionalidad W?** → [Funcionalidades](./05-funcionalidades.md)
-- **¿Cómo ejecuto/despliego el proyecto?** → [Instalación y Ejecución](./06-instalacion-ejecucion.md)
+1. **[Introducción](./docs/01-introduccion.md)** - Contexto general
+2. **[Instalación y Ejecución](./docs/06-instalacion-ejecucion.md)** - Poner en marcha el proyecto
+3. **[Estructura](./docs/02-estructura.md)** - Familiarizarse con la organización
+4. **[Funcionalidades](./docs/05-funcionalidades.md)** - Entender qué hace la aplicación
+5. **[Servicios](./docs/03-servicios.md)** - Profundizar en la lógica de negocio
+6. **[Componentes](./docs/04-componentes.md)** - Estudiar la UI
 
 ---
 
@@ -168,9 +160,9 @@ Si ya conoces el proyecto y necesitas consultar algo específico:
 
 Documentos clave para evaluación:
 
-1. **[Introducción](./01-introduccion.md)** - Integrantes, propósito, alcance y tecnologías
-2. **[Funcionalidades](./05-funcionalidades.md)** - Casos de uso y flujos implementados
-3. **[Estructura](./02-estructura.md)** - Organización y arquitectura del código
+1. **[Introducción](./docs/01-introduccion.md)** - Integrantes, propósito, alcance y tecnologías
+2. **[Funcionalidades](./docs/05-funcionalidades.md)** - Casos de uso y flujos implementados
+3. **[Estructura](./docs/02-estructura.md)** - Organización y arquitectura del código
 
 ---
 
@@ -191,52 +183,9 @@ Documentos clave para evaluación:
 
 ---
 
-## 📝 Convenciones de la Documentación
-
-### Formato de Código
-
-Los ejemplos de código están formateados con syntax highlighting:
-
-```typescript
-// Ejemplo TypeScript
-export class MiClase {
-  constructor() {}
-}
-```
-
-```bash
-# Ejemplo de comandos
-npm install
-```
-
-### Iconos y Símbolos
-
-- ✅ Característica implementada
-- ⚠️ Advertencia o limitación
-- 💡 Consejo o buena práctica
-- 🔗 Enlace a otro documento
-
 ### Tablas
 
 Las tablas se usan para presentar información estructurada de forma clara.
-
----
-
-## 🔄 Actualizaciones de la Documentación
-
-Esta documentación fue generada el **10 de octubre de 2025** y refleja el estado actual del proyecto.
-
-Si realizas cambios significativos en el código, considera actualizar la documentación correspondiente.
-
----
-
-## 📞 Soporte
-
-Para preguntas o aclaraciones sobre la documentación o el proyecto:
-
-- Contacta a **Angie Cantor** o **Diego Chavez**
-- Revisa el código fuente en `src/`
-- Consulta la documentación oficial de [Angular](https://angular.dev/)
 
 ---
 
@@ -248,9 +197,9 @@ Este proyecto es de uso académico. Consulta con los integrantes para más infor
 
 ## 🎯 Próximos Pasos
 
-1. Lee la **[Introducción](./01-introduccion.md)** para entender el contexto
-2. Sigue la guía de **[Instalación y Ejecución](./06-instalacion-ejecucion.md)** para ejecutar el proyecto
-3. Explora el código siguiendo la **[Estructura](./02-estructura.md)**
+1. Lee la **[Introducción](./docs/01-introduccion.md)** para entender el contexto
+2. Sigue la guía de **[Instalación y Ejecución](./docs/06-instalacion-ejecucion.md)** para ejecutar el proyecto
+3. Explora el código siguiendo la **[Estructura](./docs/02-estructura.md)**
 4. ¡Empieza a desarrollar! 🚀
 
 ---
