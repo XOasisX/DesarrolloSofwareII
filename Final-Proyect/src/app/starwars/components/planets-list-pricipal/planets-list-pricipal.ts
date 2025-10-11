@@ -1,7 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlanetaAleatorio } from './planeta-aleatorio/planeta-aleatorio';
-import { Planeta, PlanetaService } from '../../services/starwars.planetaService';
+import { PlanetaService } from '../../services/starwars.planetaService';
+import { Planeta } from '../../interfaces/planets-interfaces';
 
 @Component({
   selector: 'planets-list-pricipal',

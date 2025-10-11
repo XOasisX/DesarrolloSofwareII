@@ -27,14 +27,7 @@ export class MovieService {
       .subscribe({
         next: (response) => {
           const films = FilmMapper.mapSwapiFilmsToFilms(response.results);
-
-          // const films: Film[] = response.results.map((filmApi: SwapiFilmResponse) => ({
-          //   episodio: filmApi.episode_id,
-          //   titulo: filmApi.title,
-          //   director: filmApi.director,
-          //   textoApertura: filmApi.opening_crawl
-          // }));
-         
+          
           this.allFilms.set(films.sort((a, b) => a.episodio - b.episodio));
           this.isLoading.set(false);
         },

@@ -43,11 +43,6 @@ export class StarWarsService {
         next: (data) => {
 
           const apiPersonajes = PeopleMapper.mapPersonajes(data.results);
-          // const apiPersonajes = data.results.map((p: any) => ({
-          //   name: p.name,
-          //   gender: p.gender,
-          //   birth_year: p.birth_year
-          // }));
 
           const locales = this.getPersonajesLocal();
           observer.next([...apiPersonajes, ...locales]);

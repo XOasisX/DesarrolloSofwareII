@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Planeta } from '../../../services/starwars.planetaService';
+import { Planeta } from '../../../interfaces/planets-interfaces';
 
 @Component({
   selector: 'planeta-aleatorio',

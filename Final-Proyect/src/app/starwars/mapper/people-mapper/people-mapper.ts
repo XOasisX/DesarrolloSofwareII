@@ -1,7 +1,7 @@
 import { Personaje } from 'src/app/starwars/interfaces/people-interfaces';  
 
 export class PeopleMapper {
-  static mapPersonaje(personaje : any): Personaje {
+  static mapPersonaje(personaje: any): Personaje {
     return {
       name: personaje.name,
       gender: personaje.gender,
