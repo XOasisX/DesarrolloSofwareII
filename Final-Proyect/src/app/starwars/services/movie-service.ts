@@ -1,8 +1,6 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SwapiFilmsResult, SwapiFilmResponse, Film } from '../interfaces/movie-interface';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { SwapiFilmsResult, Film } from '../interfaces/movie-interface';
 import { environment } from '@environments/environments';
 import { FilmMapper } from '../mapper/film-mapper/film-mapper';
 
@@ -14,7 +12,6 @@ export class MovieService {
 
   private allFilms = signal<Film[] | null>(null);
   public isLoading = signal<boolean>(false);
-  
   public dataReady = this.allFilms;
 
   constructor() {
